@@ -43,7 +43,7 @@ $(document).ready(function () {
         /**
          * 补足两位数
          */
-        const h = getHours < 10 ? `0${getHours}` : `${getHours}`
+        const h = getHours   < 10 ? `0${getHours}`   : `${getHours}`
         const m = getMinutes < 10 ? `0${getMinutes}` : `${getMinutes}`
         const s = getSeconds < 10 ? `0${getSeconds}` : `${getSeconds}`
         /**
@@ -52,5 +52,6 @@ $(document).ready(function () {
         $('.hours').text(h)
         $('.minutes').text(m)
         $('.seconds').text(s)
+        $('.localeDate').text(dt.toLocaleDateString())
     }
 })

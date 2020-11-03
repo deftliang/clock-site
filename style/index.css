@@ -9,7 +9,20 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #2c3e50;
+    flex-direction: column;
 }
+
+.localeDate {
+    color: #f1c40f;
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #535c68;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 
 .clock {
     color: #f1c40f;
