@@ -76,8 +76,10 @@ $(document).ready(function () {
     $nav.attr('style', 'display:none;')
     navOpen = false
     $path.attr('fill', '#535c68')
+    $btn.attr('style', 'transform:rotate(0deg)')
+    e.stopPropagation()
   })
-  $btn.on('click', function () {
+  $btn.on('click', function (e) {
     if (navOpen) {
       $nav.attr('style', 'display:none;')
       navOpen = false
@@ -85,12 +87,28 @@ $(document).ready(function () {
       $nav.attr('style', 'display:block;')
       navOpen = true
     }
+    e.stopPropagation()
   })
   $btn.on('mouseenter', function () {
     $path.attr('fill', '#f2f2f2')
+    $btn.attr('style', 'transform:rotate(180deg)')
+    e.stopPropagation()
   })
   $btn.on('mouseleave', function () {
     if (navOpen) return
     $path.attr('fill', '#535c68')
+    $btn.attr('style', 'transform:rotate(0deg)')
+    e.stopPropagation()
+  })
+  $('body').on('click', function (e) {
+    if (navOpen) {
+      if (e.target !== $nav.get(0) && e.target !== $btn.get(0)) {
+        $nav.attr('style', 'display:none;')
+        navOpen = false
+        $path.attr('fill', '#535c68')
+        $btn.attr('style', 'transform:rotate(0deg)')
+      }
+    }
+    e.stopPropagation()
   })
 })

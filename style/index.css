@@ -49,6 +49,7 @@ body {
   bottom: 10px;
   right: 10px;
   color: #dcdde1;
+  transition: transform 0.7s ease;
 }
 
 .setting #path {
@@ -85,4 +86,3 @@ body {
   background: #f2f2f2;
   color: #000;
 }
-
