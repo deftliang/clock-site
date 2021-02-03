@@ -89,12 +89,12 @@ $(document).ready(function () {
     }
     e.stopPropagation()
   })
-  $btn.on('mouseenter', function () {
+  $btn.on('mouseenter', function (e) {
     $path.attr('fill', '#f2f2f2')
     $btn.attr('style', 'transform:rotate(180deg)')
     e.stopPropagation()
   })
-  $btn.on('mouseleave', function () {
+  $btn.on('mouseleave', function (e) {
     if (navOpen) return
     $path.attr('fill', '#535c68')
     $btn.attr('style', 'transform:rotate(0deg)')
