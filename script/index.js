@@ -49,9 +49,11 @@ $(document).ready(function () {
         if (localeDateOpen) {
           $localeDate.attr('style', 'display:none;')
           localeDateOpen = false
+          e.target.innerText = 'Show Date'
         } else {
           $localeDate.attr('style', 'display:block;')
           localeDateOpen = true
+          e.target.innerText = 'Hide Date'
         }
         break
       case '1':
