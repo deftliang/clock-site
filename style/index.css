@@ -19,7 +19,6 @@ body {
 }
 
 .localeDate {
-  display: none;
   color: #f1c40f;
   font-size: 30px;
   position: absolute;
@@ -44,10 +43,21 @@ body {
   border-radius: 20px;
 }
 
+.clock > .dot {
+  padding: 0 30px;
+  font-style: normal;
+}
+
+
 .setting {
   position: absolute;
   bottom: 10px;
   right: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #dcdde1;
   transition: transform 0.7s ease;
 }
@@ -57,7 +67,6 @@ body {
 }
 
 .nav {
-  display: none;
   box-sizing: border-box;
   position: absolute;
   bottom: 60px;
